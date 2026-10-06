@@ -38,6 +38,7 @@ def make_set_array (min:int, max:int, n:int) -> set :
         a.add(elem)
     return a
 
+
 def make_array_numpy (min:int, max:int, n:int) -> np.ndarray:
     """
     Функция создания массива нечетных и не повторяющихся чисел с помощью пакета numpy
@@ -59,6 +60,7 @@ def make_array_numpy (min:int, max:int, n:int) -> np.ndarray:
     res = np.random.choice(np.arange(min if min % 2 != 0 else min + 1, max + 1, 2), n, replace=False)
     return res
 
+
 def process_arr_pyt_sigmoind (l : list) -> float :
     """
     Функция обработки каждого элемента массива по формуле Сигмоиды и получения их суммы. Используются встроенные
@@ -79,6 +81,7 @@ def process_arr_numpy_sigmoind (arr : np.ndarray) -> float :
     :return: возвращает сумму обработанных элементов
     """
     return  np.sum(1 / (1 + np.exp (-np.array(arr))))
+
 
 if __name__ == '__main__':
 
